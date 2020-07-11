@@ -92,14 +92,14 @@ const rootReducer = combineReducers({
 })
 
 
-
-
 const store  =  createstore(rootReducer,applymiddleware(logger))
 console.log('initial state',store.getState())
 const unsubscribe =  store.subscribe(()=>{})
 store.dispatch(buyCake())
 store.dispatch(buyCake())
 store.dispatch(buyCake())
+store.dispatch(buyIcecream())
+store.dispatch( buyIcecream())
 store.dispatch(buyIcecream())
 store.dispatch( buyIcecream())
 unsubscribe()
